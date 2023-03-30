@@ -19,11 +19,10 @@ or
 ```bash
 $ python3 --version
 ```
-- Note : if you have python3 installed, then substitute python with python3 in all further terminal commands
 
 Resources : 
-- [Linux](https://www.scaler.com/topics/python/install-python-on-linux/)
-- [Mac-os](https://www.dataquest.io/blog/installing-python-on-mac/)
+- [Python installation on Linux](https://www.scaler.com/topics/python/install-python-on-linux/)
+- [Python installation on Mac-os](https://www.dataquest.io/blog/installing-python-on-mac/)
 
 ### pip
 - you can check if you have pip installed by running the following command on your terminal
@@ -37,10 +36,9 @@ or
 $ pip3 --version
 ```
 
-- Note : if you have python3 installed, then substitute pip with pip3 in all further terminal commands
 <br>
 
-<img src="https://res.cloudinary.com/dgbobpgf4/image/upload/v1680170267/django-tut/python-pip.png">
+<img src="https://res.cloudinary.com/dgbobpgf4/image/upload/v1680176102/django-tut/python-pip.png">
 
 ## Step 1 — Open Terminal
 First, you need to open Terminal on your on linux or macos.
@@ -69,7 +67,7 @@ Your prompt should now show you that you’re in the firstProject directory as s
 
 
 <br>
-<img src = "https://res.cloudinary.com/dgbobpgf4/image/upload/v1680171329/django-tut/firstProjectDirectory.png">
+<img src = "https://res.cloudinary.com/dgbobpgf4/image/upload/v1680176069/django-tut/firstProjectDirectory.png">
 
 After setting up the working directory for your project, the next step is to establish a virtual environment where you can install Django.
 
@@ -80,6 +78,12 @@ You'll first need to install the virtual environment package in global system to
 
 ```bash 
 $ pip install virtualenv
+```
+
+or
+
+```bash 
+$ pip3 install virtualenv
 ```
 
 Next step, you’ll create a virtual environment for your project. A virtual environment is an isolated environment in Python where you can install the project dependencies without affecting other Python projects. This lets you create different projects that use different versions of Django.
@@ -122,91 +126,85 @@ $ source env/bin/activate
 After you run the command, you will see 
 a (env) at the beginning of the prompt. This shows that the virtual environment is activated:
 
-```bash
-(env) shikari@shikari:~/Desktop/django_project$ 
-```
+<img src="https://res.cloudinary.com/dgbobpgf4/image/upload/v1680176278/django-tut/activateEnv.png">
 
 Now that you’ve activated the virtual environment for your project, the moment you’ve been waiting for is here. It’s time to install Django!
 
-## Step 6 - Installing Django
+## Step 5 - Installing Django
 In this section, you will install Django on your system using pip.
-
-Run the following command to install the latest version of Django using pip install:
+Make sure that your virtual environment is activated for the next commands. To activate your virtual environment follow step 4.
+Run the following command to install the latest version of Django:
 ```bash
-(env)> pip install django
+$ pip install django
 
 ```
 
 If you want to install a different Django version, you can specify the version as follows:
 
 ```bash
-(env)> pip install django==3.2.9
+$ pip install django==3.2.9
 
 ```
 Once the installation finishes, you need to verify that Django has been installed. To do that, type the following command:
 ```bash 
-(env)> django-admin --version
+$ django-admin --version
 
 ```
 You will get output showing you the Django version installed on your system:
 
-```bash
-(env) shikari@shikari:~/Desktop/django_project$ django-admin --version
-3.2.9
-```
+<img src="https://res.cloudinary.com/dgbobpgf4/image/upload/v1680176647/django-tut/installDjango.png">
 
-At the time of writing, the latest Django version is 3.2.9, and that’s why my output shows that.
+At the time of writing, the latest Django version is 4.1.7, and that’s why my output shows that.
 
 You’ve now installed Django on your system, great job! You’ll begin to create a Django project.
 
 
-## Step 7 - Creating the Django Project
-
+## Step 6 - Creating the Django Project
 Now it’s time to create a project. A project has a different meaning from what you may be used to. The Django documentation defines it as:
 
 A Python package – i.e. a directory of code – that contains all the settings for an instance of Django. This would include database configuration, Django-specific options and application-specific settings.
 
 You create a project by using the command-line utility django-admin that comes with Django. The command generates files where you can configure the settings for your database, add third-party packages for your project to mention a few.
 
+NOte : Run all the commands with your virtual environment activated
+
 Create the project using the django-admin startproject command:
 
 ```bashh
-(env)> django-admin startproject test_project
+$ django-admin startproject test_project
 ```
 Change into the test_project directory:
 
 ```bash
-(env)> cd test_project
+$ cd test_project
 ```
 Type the following command to see the contents in the project directory:
 
 ```bash
-(env)> ls test_project
+$ ls
 ```
 You will get output similar to this:
 
-```bash
-(env) shikari@shikari:~/Desktop/django_project/test_project$ ls
-
-   Directory: shikari@shikari:~/Desktop/django_project/test_project$
-
-Mode                LastWriteTime         Length Name
-
-----                -------------         ------ ----
-
-d-----         9/4/2021   1:25 AM                test_project
-
--a----         9/4/2021   1:25 AM            690 manage.py
-```
+<br>
+<img src="https://res.cloudinary.com/dgbobpgf4/image/upload/v1680178147/django-tut/startProject.png">
 
 
-The directory test_project contains Django configuration files. The manage.py file comes in handy when starting a development server, and that’s what you will do in the next step.
+The directory test_project contains Django configuration files. 
+
+The manage.py file is a command-line utility that comes with every Django project. It provides a way to interact with various aspects of the project, such as running the development server, creating database tables, and running tests. You can execute various commands in the terminal using python manage.py <command>. For example, python manage.py runserver starts the development server. We will be doing this in the next step.
+
+The project folder, on the other hand, is the top-level folder of your Django project. It usually has the same name as your project and contains all the necessary files and folders to make your Django project work. Inside the project folder, you'll typically find a few files and directories, including the settings.py file, which contains the project settings, a urls.py file, which contains the URL configuration for the project, and a wsgi.py file, which is used for deployment.
+
+Overall, the manage.py file and the project folder are both critical components of any Django project, and understanding how they work is essential to developing Django applications effectively.
+
 ## Step 9 - Running the Development Server
 Now that the project has been created, we will start the Django development server.
 
+Note : Run all the commands with your virtual environment activated
+
 Start the development server using the manage.py runserver command:
 ```bash 
-(env)> python manage.py runserver
+$ python manage.py runserver
 ```
 
 Next, visit http://127.0.0.1:8000/ in your web browser. You should see a page similar to the following screenshot
@@ -215,8 +213,11 @@ Next, visit http://127.0.0.1:8000/ in your web browser. You should see a page si
 
 
 
-Tip You can stop the server by holding CTRL+C. To deactivate the virtual environment, you can type deactivate on the prompt.
+You can stop the server by holding CTRL+C. To deactivate the virtual environment, you can type deactivate on the prompt.
 
 Now, you are ready to start developing your project, see you there in the session with multiple projects.
 ## References
 https://docs.djangoproject.com/
+
+## Credits
+[Avnoor](https://github.com/avnoor-488)
