@@ -102,8 +102,10 @@ Next, confirm the env directory has been created by listing the directory conten
 $ ls 
 ```
 
-You should see the directory env in the output as shown in the following screenshot:
+You should see the directory env in the output as shown :
 
+<br>
+<img src = "https://res.cloudinary.com/dgbobpgf4/image/upload/v1680175824/django-tut/installenv.png">
 
 Now you’ve created the virtual environment directory, you’ll activate the environment.
 
