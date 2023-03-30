@@ -1,5 +1,5 @@
 
-# Setup guide of Django for  Linux-Mac Users
+# Setup guide of Django for  Linux/Mac Users
 
 
 
@@ -21,7 +21,9 @@ $ python3 --version
 ```
 - Note : if you have python3 installed, then substitute python with python3 in all further terminal commands
 
-Resource : [https://www.scaler.com/topics/python/install-python-on-linux/](https://www.scaler.com/topics/python/install-python-on-linux/)
+Resources : 
+- [Linux](https://www.scaler.com/topics/python/install-python-on-linux/)
+- [Mac-os](https://www.dataquest.io/blog/installing-python-on-mac/)
 
 ### pip
 - you can check if you have pip installed by running the following command on your terminal
@@ -36,6 +38,7 @@ $ pip3 --version
 ```
 
 - Note : if you have python3 installed, then substitute pip with pip3 in all further terminal commands
+<br>
 
 <img src="https://res.cloudinary.com/dgbobpgf4/image/upload/v1680170267/django-tut/python-pip.png">
 
@@ -62,15 +65,16 @@ Move into the firstProject directory using the cd command:
 ```bash
 $ cd firstProject
 ```
-Your prompt should now show you that you’re in the django_project directory as shown in the following output:
-```bash
-shikari@shikari:~/Desktop/django_project$ 
-```
-
-Now that you’ve created the working directory for your project, you’ll create a virtual environment where you’ll install Django.
+Your prompt should now show you that you’re in the firstProject directory as shown in the following output:
 
 
-## Step 3 - Installing and Creating the Virtual Environment
+<br>
+<img src = "https://res.cloudinary.com/dgbobpgf4/image/upload/v1680171329/django-tut/firstProjectDirectory.png">
+
+After setting up the working directory for your project, the next step is to establish a virtual environment where you can install Django.
+
+
+## Step 3 - Creating a Virtual Environment
 
 You'll first need to install the virtual environment package in global system to use it in project directories .
 
