@@ -166,7 +166,7 @@ A Python package – i.e. a directory of code – that contains all the settings
 
 You create a project by using the command-line utility django-admin that comes with Django. The command generates files where you can configure the settings for your database, add third-party packages for your project to mention a few.
 
-NOte : Run all the commands with your virtual environment activated
+Note : Run all the commands with your virtual environment activated
 
 Create the project using the django-admin startproject command:
 
@@ -221,3 +221,5 @@ https://docs.djangoproject.com/
 
 ## Credits
 [Avnoor](https://github.com/avnoor-488)
+
+Check out Avnoor's repository [here](https://github.com/avnoor-488/Thapar-Summer-School)
