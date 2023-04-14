@@ -1,12 +1,19 @@
+{% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Successful</title>
+	<title>Greyscale Converter - Success</title>
+
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,500,600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'index.css' %}">
 </head>
 <body>
-    <h1>The greyscale image has been sent to your email.</h1>
+	<div class="container">
+		<h1>Greyscale Converter</h1>
+		<p>Your image has been successfully converted to greyscale and sent to the email address you provided.</p>
+		<a href="{% url 'index' %}" class="btn">Back to Home</a>
+	</div>
 </body>
 </html>

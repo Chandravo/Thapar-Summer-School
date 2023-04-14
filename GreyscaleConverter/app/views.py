@@ -47,5 +47,6 @@ def send_email(email,grey_name):
         settings.EMAIL_HOST_USER,
         [email]
     )
+    print("email sent to "+email)
     email_message.attach_file(settings.MEDIA_ROOT+grey_name)
     email_message.send()
